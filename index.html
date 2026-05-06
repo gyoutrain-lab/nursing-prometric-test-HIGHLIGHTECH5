@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Technician Mastery: Days 5-7</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
+        .header { background-color: #1a5276; color: white; padding: 25px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+        .header h1 { margin: 0 0 10px 0; font-size: 1.8em; }
+        #welcome-screen { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .progress-container { width: 100%; background-color: #ddd; border-radius: 10px; margin-bottom: 20px; display: none; }
+        .progress-bar { height: 20px; background-color: #27ae60; width: 0%; border-radius: 10px; transition: width 0.3s; }
+        .question-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: none; }
+        .question-card.active { display: block; }
+        .option { display: block; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: 0.2s; }
+        .option:hover { background-color: #ecf0f1; }
+        .option.selected-correct { background-color: #27ae60; color: white; border-color: #1e8449; }
+        .option.selected-incorrect { background-color: #e74c3c; color: white; border-color: #c0392b; }
+        .btn-nav { background-color: #1a5276; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 20px; font-size: 1em; }
+        .rationale { display: none; margin-top: 15px; padding: 15px; background-color: #e8f6f3; border-left: 5px solid #1abc9c; font-size: 0.9em; }
+        #results-screen { display: none; background: white; padding: 30px; border-radius: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Nurse Technician Advanced Mastery</h1>
+    <p>Days 5, 6, & 7: Ethics, Specialized Care, & Final Review</p>
+</div>
+
+<div id="welcome-screen">
+    <h2>Continue Your Certification Prep</h2>
+    <p>This module covers Items 101–175 of the Nurse Technician Mastery series.</p>
+    <div style="margin: 20px 0;">
+        <input type="text" id="user-name" placeholder="Enter Your Name" style="padding: 10px; width: 250px;">
+    </div>
+    <button class="btn-nav" onclick="startExam()">Begin Day 5-7 Module</button>
+</div>
+
+<div class="progress-container" id="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<div id="quiz-container"></div>
+
+<div id="results-screen">
+    <h2>Module Complete</h2>
+    <p id="candidate-name"></p>
+    <p id="score-text"></p>
+    <button class="btn-nav" onclick="location.reload()">Restart Module</button>
+</div>
+
+<script>
+    const questions = [
+        // --- Day 5: Ethical, Legal, & Communication Standards ---
+        {
+            q: "A nurse technician is at lunch in the hospital cafeteria and begins discussing a patient’s colorful behavior with a colleague. This action is a violation of:",
+            options: ["The patient’s right to a private room", "HIPAA and patient confidentiality", "The hospital’s dress code policy", "The technician’s right to free speech"],
+            correct: 1,
+            rationale: "Patient information should only be shared in a clinical setting with those who have a direct 'need to know' for providing care."
+        },
+        {
+            q: "A patient refuses to take their scheduled bath, stating they are too tired. What is the most appropriate response by the nurse technician?",
+            options: ["Force the patient to bathe anyway", "Respect the patient’s right to refuse and offer to assist later", "Tell the patient they cannot have dinner", "Call the family to scold the patient"],
+            correct: 1,
+            rationale: "Patients have the right to refuse care. The technician should document the refusal and attempt to reschedule."
+        },
+        {
+            q: "Which of the following actions by a nurse technician would be considered Invasion of Privacy?",
+            options: ["Closing the curtain before using a bedpan", "Looking through a patient’s personal purse without permission", "Knocking on the door before entering", "Covering a patient with a bath blanket"],
+            correct: 1,
+            rationale: "Patients retain rights to their personal belongings; searching them without consent or clinical necessity is a violation."
+        },
+        {
+            q: "A technician is asked by a patient's friend over the phone for an update. The technician should:",
+            options: ["Give a detailed report", "Tell the friend the patient is doing poorly", "Politely refer the caller to the nurse or the patient's spokesperson", "Hang up immediately"],
+            correct: 2,
+            rationale: "Privacy laws prevent the disclosure of medical information to unauthorized callers."
+        },
+        {
+            q: "Viewing the medical records of a patient not assigned to you just out of curiosity is:",
+            options: ["A good way to learn", "Acceptable if you are on shift", "A major HIPAA violation and terminable offense", "Only wrong if you tell someone"],
+            correct: 2,
+            rationale: "Accessing records without a professional 'need to know' is a serious breach of confidentiality."
+        },
+
+        // --- Day 6: Specialized Care (Maternity, Peds, Mental Health) ---
+        {
+            q: "A technician notices a postpartum mother’s bedsheet is soaked with bright red blood. What is the priority action?",
+            options: ["Change the sheets quickly", "Massage the abdomen vigorously", "Notify the nurse immediately", "Tell the mother this is normal"],
+            correct: 2,
+            rationale: "Heavy bleeding (postpartum hemorrhage) is a medical emergency that requires immediate assessment by the licensed nurse."
+        },
+        {
+            q: "When weighing a newborn infant, which safety measure is most important?",
+            options: ["Leave the infant on the scale to document", "Keep one hand hovering just above the infant at all times", "Weigh the infant with heavy clothes on", "Place the scale on the floor"],
+            correct: 1,
+            rationale: "Infants can move unexpectedly; 'hovering' ensures safety without affecting the weight measurement."
+        },
+        {
+            q: "A 4-year-old child is crying for their parents. Which action is most helpful?",
+            options: ["Tell the child big kids don't cry", "Offer a favorite toy or distraction", "Lock the door", "Ignore the crying"],
+            correct: 1,
+            rationale: "Distraction and play are age-appropriate therapeutic interventions for pediatric distress."
+        },
+        {
+            q: "A mental health patient begins to pace rapidly and speak loudly. The technician should:",
+            options: ["Ignore the behavior", "Alert the nurse and provide space for the patient", "Challenge the patient's statements", "Tell the patient to sit down immediately"],
+            correct: 1,
+            rationale: "Pacing and loud speech are signs of escalating agitation; ensuring safety and notifying the nurse is the priority."
+        },
+        {
+            q: "In the nursery, a technician notices an infant has a bluish tint around the mouth (circumoral cyanosis). The technician should:",
+            options: ["Check the infant's diaper", "Provide a warm blanket", "Report it to the nurse immediately", "Wait 10 minutes to see if it improves"],
+            correct: 2,
+            rationale: "Cyanosis indicates poor oxygenation and is a critical finding in a newborn."
+        },
+
+        // --- Day 7: Comprehensive Review & Priority ---
+        {
+            q: "A patient with a cast complains of an itch, but another patient’s pulse has increased from 72 to 110. Who should be reported FIRST?",
+            options: ["The patient with the itch", "The patient with the increased pulse", "A patient who refused breakfast", "A patient who wants water"],
+            correct: 1,
+            rationale: "Tachycardia (pulse over 100) is a physiological change that takes precedence over comfort or routine requests."
+        },
+        {
+            q: "Which task is OUTSIDE the scope of practice for a nurse technician?",
+            options: ["Taking a rectal temperature", "Applying a simple non-sterile dressing", "Adjusting the flow rate of an IV pump", "Assisting with a walker"],
+            correct: 2,
+            rationale: "Managing IV medication pumps requires a license and is outside the technical scope of practice."
+        },
+        {
+            q: "When collecting a mid-stream urine specimen, the technician should instruct the patient to:",
+            options: ["Collect the very first part of the stream", "Clean the area, start to void, then collect the middle portion", "Fill the cup to the brim", "Not use any cleaning wipes"],
+            correct: 1,
+            rationale: "Mid-stream collection reduces contamination from skin bacteria."
+        },
+        {
+            q: "A patient with suicidal ideation is placed on 1-to-1 observation. The technician should:",
+            options: ["Check on them every 15 minutes", "Keep the door closed", "Maintain constant 'eyes-on' contact at all times", "Stay in the hallway"],
+            correct: 2,
+            rationale: "1-to-1 observation requires continuous, direct visual monitoring to ensure the patient's safety."
+        },
+        {
+            q: "Post-mortem care (care after death) should be performed:",
+            options: ["Only by the doctor", "With respect and dignity, following hospital policy", "Immediately after the family leaves without cleaning the body", "Only if the patient's family pays"],
+            correct: 1,
+            rationale: "Post-mortem care is a vital nursing task that demonstrates respect for the deceased and the family."
+        }
+    ];
+
+    let currentIdx = 0;
+    let score = 0;
+
+    function startExam() {
+        const name = document.getElementById('user-name').value;
+        if (!name) return alert("Please enter your name.");
+        document.getElementById('welcome-screen').style.display = 'none';
+        document.getElementById('progress-container').style.display = 'block';
+        initQuiz();
+    }
+
+    function initQuiz() {
+        const container = document.getElementById('quiz-container');
+        questions.forEach((q, i) => {
+            const div = document.createElement('div');
+            div.className = 'question-card' + (i === 0 ? ' active' : '');
+            div.id = `card-${i}`;
+            div.innerHTML = `
+                <h3>Question ${i + 101}</h3>
+                <p>${q.q}</p>
+                ${q.options.map((opt, oi) => `<div class="option" onclick="handleSelect(${i}, ${oi}, this)">${opt}</div>`).join('')}
+                <div class="rationale" id="rat-${i}"><strong>Rationale:</strong> ${q.rationale}</div>
+                <button class="btn-nav" id="next-${i}" style="display:none" onclick="goNext()">Next Question</button>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function handleSelect(qi, oi, el) {
+        const card = document.getElementById(`card-${qi}`);
+        if (card.dataset.answered) return;
+        card.dataset.answered = "true";
+
+        if (oi === questions[qi].correct) {
+            el.classList.add('selected-correct');
+            score++;
+        } else {
+            el.classList.add('selected-incorrect');
+            card.querySelectorAll('.option')[questions[qi].correct].classList.add('selected-correct');
+        }
+
+        document.getElementById(`rat-${qi}`).style.display = 'block';
+        document.getElementById(`next-${qi}`).style.display = 'inline-block';
+    }
+
+    function goNext() {
+        document.getElementById(`card-${currentIdx}`).classList.remove('active');
+        currentIdx++;
+        updateProgress();
+        if (currentIdx < questions.length) {
+            document.getElementById(`card-${currentIdx}`).classList.add('active');
+        } else {
+            showResults();
+        }
+    }
+
+    function updateProgress() {
+        document.getElementById('progress-bar').style.width = (currentIdx / questions.length * 100) + '%';
+    }
+
+    function showResults() {
+        document.getElementById('progress-container').style.display = 'none';
+        const res = document.getElementById('results-screen');
+        res.style.display = 'block';
+        document.getElementById('candidate-name').innerText = `Results for ${document.getElementById('user-name').value}`;
+        document.getElementById('score-text').innerText = `Final Score: ${score} / ${questions.length}`;
+    }
+</script>
+
+</body>
+</html>
