@@ -3,221 +3,554 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nurse Technician Mastery: Days 5-7</title>
+    <title>Nurse Technician Mastery: Days 5-7 Test Mastery</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
-        .header { background-color: #1a5276; color: white; padding: 25px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
-        .header h1 { margin: 0 0 10px 0; font-size: 1.8em; }
-        #welcome-screen { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
-        .progress-container { width: 100%; background-color: #ddd; border-radius: 10px; margin-bottom: 20px; display: none; }
-        .progress-bar { height: 20px; background-color: #27ae60; width: 0%; border-radius: 10px; transition: width 0.3s; }
-        .question-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: none; }
-        .question-card.active { display: block; }
-        .option { display: block; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: 0.2s; }
-        .option:hover { background-color: #ecf0f1; }
-        .option.selected-correct { background-color: #27ae60; color: white; border-color: #1e8449; }
-        .option.selected-incorrect { background-color: #e74c3c; color: white; border-color: #c0392b; }
-        .btn-nav { background-color: #1a5276; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 20px; font-size: 1em; }
-        .rationale { display: none; margin-top: 15px; padding: 15px; background-color: #e8f6f3; border-left: 5px solid #1abc9c; font-size: 0.9em; }
-        #results-screen { display: none; background: white; padding: 30px; border-radius: 8px; text-align: center; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a5276;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .welcome-card {
+            background: #ebf5fb;
+            border-left: 5px solid #2980b9;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        .question-block {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .question-title {
+            font-weight: bold;
+            color: #1a5276;
+            margin-bottom: 10px;
+        }
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .options-list li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #fdfefe;
+            border: 1px solid #d5dbdb;
+            border-radius: 4px;
+        }
+        .answer-key {
+            background-color: #fcf3cf;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        .answer-key strong {
+            color: #7d6608;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #95a5a6;
+        }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>Nurse Technician Advanced Mastery</h1>
-    <p>Days 5, 6, & 7: Ethics, Specialized Care, & Final Review</p>
-</div>
+<div class="container">
+    <h1>Nurse Technician Mastery</h1>
+    <p class="subtitle">Complete Test Items and Rationales: Days 5, 6, and 7</p>
 
-<div id="welcome-screen">
-    <h2>Continue Your Certification Prep</h2>
-    <p>This module covers Items 101–175 of the Nurse Technician Mastery series.</p>
-    <div style="margin: 20px 0;">
-        <input type="text" id="user-name" placeholder="Enter Your Name" style="padding: 10px; width: 250px;">
+    <div class="welcome-card">
+        <h3>Exam Modules Included</h3>
+        <p>This document contains the complete original test questions, answers, and detailed rationales for Days 5, 6, and 7 to support comprehensive test preparation.</p>
     </div>
-    <button class="btn-nav" onclick="startExam()">Begin Day 5-7 Module</button>
+
+    <h2>Day 5: Ethical, Legal, & Communication Standards</h2>
+    
+    <div class="question-block">
+        <div class="question-title">Question 1</div>
+        <p>A nurse technician is at lunch in the hospital cafeteria and begins discussing a patient’s colorful behavior with a colleague. This action is a violation of:</p>
+        <ul class="options-list">
+            <li>A. The patient’s right to a private room.</li>
+            <li>B. HIPAA (Health Insurance Portability and Accountability Act) and patient confidentiality.</li>
+            <li>C. The hospital’s dress code policy.</li>
+            <li>D. The technician’s right to free speech.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> HIPAA and patient confidentiality rules state that protected health information may only be shared with individuals directly involved in the patient's care and who have a "need to know."
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 2</div>
+        <p>A patient refuses to take their scheduled bath, stating they are too tired. What is the most appropriate response by the nurse technician?</p>
+        <ul class="options-list">
+            <li>A. Force the patient to bathe anyway to maintain hospital hygiene standards.</li>
+            <li>B. Respect the patient’s right to refuse and offer to assist them later.</li>
+            <li>C. Tell the patient they cannot have dinner unless they take a bath.</li>
+            <li>D. Call the patient’s family and ask them to scold the patient.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Patients have autonomy and the right to refuse care or hygiene. The technician should document the refusal and offer to assist at a later, more convenient time.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 3</div>
+        <p>Which of the following actions by a nurse technician would be considered Invasion of Privacy?</p>
+        <ul class="options-list">
+            <li>A. Closing the curtain before assisting a patient with a bedpan.</li>
+            <li>B. Looking through a patient’s personal purse without their permission.</li>
+            <li>C. Knocking on the door before entering a patient's room.</li>
+            <li>D. Covering a patient with a bath blanket during a bed bath.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Patients retain rights to their personal items. Searching a patient's belongings without a clinical reason or consent violates their privacy rights.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 4</div>
+        <p>A nurse technician is asked by a patient's friend over the phone for an update on the patient’s condition. The technician should:</p>
+        <ul class="options-list">
+            <li>A. Give a detailed report of the patient’s vital signs and lab results.</li>
+            <li>B. Tell the friend the patient is doing poorly to encourage a visit.</li>
+            <li>C. Politely inform the caller that information cannot be shared without the patient's consent and transfer the call to the nurse.</li>
+            <li>D. Hang up immediately.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> To comply with confidentiality guidelines, you must verify authorization before releasing information to anyone, including friends or family members.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 5</div>
+        <p>A nurse technician sees the name of a neighbor on the patient assignment sheet and looks up the neighbor's diagnosis out of curiosity. This is:</p>
+        <ul class="options-list">
+            <li>A. Acceptable since they live on the same street.</li>
+            <li>B. A minor administrative issue.</li>
+            <li>C. A terminable offense and serious breach of confidentiality.</li>
+            <li>D. Permitted if the neighbor verbally asked about it earlier.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Accessing any medical record without a direct clinical assignment and a professional need to know is a severe confidentiality violation that can result in termination.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 6</div>
+        <p>A patient wishes to leave the hospital against medical advice (AMA). The nurse technician should first:</p>
+        <ul class="options-list">
+            <li>A. Block the door to prevent the patient from leaving.</li>
+            <li>B. Inform the licensed nurse immediately so the appropriate forms can be signed.</li>
+            <li>C. Tell the patient they will be reported to the police.</li>
+            <li>D. Take the patient’s clothes away.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Patients have a legal right to leave. The licensed nurse and physician must be notified so the patient is informed of the risks before signing out AMA.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 7</div>
+        <p>While bathing a patient, the nurse technician and a colleague begin to argue about a clinical assignment in front of the patient. This action violates:</p>
+        <ul class="options-list">
+            <li>A. The hospital's fire safety code.</li>
+            <li>B. Professional boundaries and the patient's right to a calm, dignified environment.</li>
+            <li>C. The patient's right to refuse treatment.</li>
+            <li>D. Standard precautions for infection control.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Arguing in front of patients creates an unprofessional environment and increases patient stress. Conflicts must be resolved privately.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 8</div>
+        <p>When a patient is making discriminatory or inappropriate remarks to the nurse technician, the most appropriate professional response is to:</p>
+        <ul class="options-list">
+            <li>A. Make a sarcastic remark back.</li>
+            <li>B. Set professional limits, remain calm, and report the behavior to the nurse in charge.</li>
+            <li>C. Stop providing care entirely without telling anyone.</li>
+            <li>D. Ignore it and verbally degrade the patient to other staff.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Technicians are expected to maintain professional boundaries, ensure their own safety, and report abusive or inappropriate behavior to the nurse in charge.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 9</div>
+        <p>A hospital displays a sign outlining patient rights near the main entrance. Which regulatory standard does this fulfill?</p>
+        <ul class="options-list">
+            <li>A. National Fire Protection Association standards.</li>
+            <li>B. Regulatory compliance for patient rights and responsibilities.</li>
+            <li>C. The laboratory safety guidelines.</li>
+            <li>D. Personal Protective Equipment (PPE) requirements.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Healthcare facilities are legally required to inform patients of their rights and display them prominently.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 10</div>
+        <p>A Muslim patient requests that their bed be oriented toward Mecca during prayer times. What is the most appropriate action by the technician?</p>
+        <ul class="options-list">
+            <li>A. Tell the patient that all hospital beds face the same direction.</li>
+            <li>B. Politely assist in turning the bed if the room layout permits, respecting the patient's spiritual needs.</li>
+            <li>C. Ignore the request because it is not a medical intervention.</li>
+            <li>D. Tell the patient to wait until visiting hours are over.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Respecting cultural and religious rituals is an essential component of total patient care and shows respect for the patient's dignity.
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Day 6: Specialist Nursing Care—Maternity, Pediatrics, & Mental Health</h2>
+
+    <div class="question-block">
+        <div class="question-title">Question 11</div>
+        <p>A nurse technician is assisting a mother with postpartum care. The technician notices the mother’s bedsheet is soaked with a large amount of bright red blood shortly after delivery. What is the priority action?</p>
+        <ul class="options-list">
+            <li>A. Change the sheets quickly so the mother stays dry.</li>
+            <li>B. Massage the mother's abdomen vigorously.</li>
+            <li>C. Notify the nurse immediately of the heavy bleeding.</li>
+            <li>D. Tell the mother this is normal after having a baby.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Heavy, bright red bleeding shortly after delivery can be a sign of postpartum hemorrhage. The nurse must assess the patient immediately.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 12</div>
+        <p>When weighing a newborn infant in the nursery, which safety measure is most important for the nurse technician to follow?</p>
+        <ul class="options-list">
+            <li>A. Leave the infant on the scale to go document the weight.</li>
+            <li>B. Keep one hand hovering just above the infant at all times to prevent falls.</li>
+            <li>C. Weigh the infant with their heavy winter clothes on.</li>
+            <li>D. Place the scale on the floor to make it safer.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Newborns can move unexpectedly. Keeping a hand close (hovering) without touching the scale ensures the safety of the infant.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 13</div>
+        <p>A nurse technician is assigned to the Pediatric unit. A 4-year-old child is crying for their parents. Which action by the technician is most helpful?</p>
+        <ul class="options-list">
+            <li>A. Tell the child that "big kids don't cry."</li>
+            <li>B. Offer a favorite toy or engage the child in a simple distraction like a storybook.</li>
+            <li>C. Lock the door so the child cannot run away.</li>
+            <li>D. Ignore the crying so the child learns to be independent.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Pediatric patients experience separation anxiety. Age-appropriate distraction helps soothe the child and reduces emotional distress.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 14</div>
+        <p>In a Mental Health unit, a patient begins to pace rapidly and speak in a loud, aggressive tone. What is the priority action?</p>
+        <ul class="options-list">
+            <li>A. Challenge the patient's statements to show them they are wrong.</li>
+            <li>B. Ensure personal safety, provide space, and notify the nurse immediately.</li>
+            <li>C. Restrain the patient using bed sheets.</li>
+            <li>D. Leave the unit and abandon the patient.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Rapid pacing and a loud voice are warning signs of potential aggression. The technician must prioritize safety and seek assistance from licensed staff.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 15</div>
+        <p>An infant in the nursery has an oxygen saturation monitor on its foot. The nurse technician notices a bluish tint around the infant's lips. The technician should:</p>
+        <ul class="options-list">
+            <li>A. Wait 15 minutes to see if the color changes.</li>
+            <li>B. Immediately report the finding to the nurse.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Central cyanosis (blueness around the core or lips) is an indicator of poor oxygenation and requires immediate assessment.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 16</div>
+        <p>A 6-month-old infant is crying and has a high temperature. The nurse technician is told to assist with a tepid sponge bath. The primary purpose of this intervention is to:</p>
+        <ul class="options-list">
+            <li>A. Induce shivering to increase the body temperature.</li>
+            <li>B. Help reduce the body temperature safely without causing shivering.</li>
+            <li>C. Clean the skin using harsh chemicals.</li>
+            <li>D. Wrap the baby tightly to keep them warm.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Tepid sponge baths reduce fever without the dangerous side effects of rapid cooling or shivering.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 17</div>
+        <p>When caring for a patient experiencing auditory hallucinations, the nurse technician should:</p>
+        <ul class="options-list">
+            <li>A. Agree with the voices to make the patient feel comfortable.</li>
+            <li>B. Argue with the patient and tell them the voices are not real.</li>
+            <li>C. Acknowledge the patient's feelings without validating the hallucination, and keep the environment calm and safe.</li>
+            <li>D. Leave the patient completely isolated in the dark.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Validating the delusion is inappropriate, but arguing can increase patient agitation. Acknowledging their feelings is a therapeutic way to maintain trust.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 18</div>
+        <p>A pediatric patient with extensive burns requires a bath and linen change. Because children lose heat faster than adults, what is a critical safety consideration during the procedure?</p>
+        <ul class="options-list">
+            <li>A. Keep the room cold to reduce bacterial growth.</li>
+            <li>B. Expose the entire body at once to complete the task quickly.</li>
+            <li>C. Minimize the exposed body surface area and keep the room warm to prevent hypothermia.</li>
+            <li>D. Use hot water to clean the wounds.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Pediatric patients are at high risk for cold stress and hypothermia, particularly when injured or burned.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 19</div>
+        <p>A patient in a psychiatric unit has a small glass vase brought by visitors. The nurse technician removes the item because it is:</p>
+        <ul class="options-list">
+            <li>A. Not permitted by the hospital's food policy.</li>
+            <li>B. A potential hazard for self-harm or injury.</li>
+            <li>C. Too expensive to keep in a hospital room.</li>
+            <li>D. Banned due to infection control standards.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Glass can be broken and presents a self-harm or violence risk in a mental health setting.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 20</div>
+        <p>When changing the gown of a patient who has an IV infusing on an electronic infusion pump, the nurse technician should:</p>
+        <ul class="options-list">
+            <li>A. Disconnect the tubing from the machine to pass the sleeve through.</li>
+            <li>B. Thread the IV bag and tubing through the arm of the gown without disconnecting the setup.</li>
+            <li>C. Pull the IV forcefully through the gown.</li>
+            <li>D. Ask the patient to remove the IV themselves.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Technicians must maintain a closed system. Disconnecting the IV line introduces infection risks.
+        </div>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h2>Day 7: Comprehensive Final Review & "Test-Trapping" Nuances</h2>
+
+    <div class="question-block">
+        <div class="question-title">Question 21</div>
+        <p>A nurse technician is assigned to four patients. Which of the following findings should be reported to the nurse immediately?</p>
+        <ul class="options-list">
+            <li>A. A patient with a cast complaining of an itch under the plaster.</li>
+            <li>B. A patient with a pulse rate that has increased from 72 to 110 beats per minute.</li>
+            <li>C. A patient who refused their breakfast tray because they "weren't hungry."</li>
+            <li>D. A patient who requested a fresh glass of water.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> A pulse jump in pulse to 110 beats per minute indicates tachycardia, which is a physiological change that takes precedence over routine comfort complaints.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 22</div>
+        <p>Which task is outside the scope of practice for a nurse technician and should be politely declined?</p>
+        <ul class="options-list">
+            <li>A. Taking a rectal temperature on an adult patient.</li>
+            <li>B. Applying a simple, non-sterile dry dressing to a minor skin tear.</li>
+            <li>C. Adjusting the flow rate of an intravenous (IV) medication pump.</li>
+            <li>D. Assisting a patient with a history of stroke to use a walker.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Adjusting IV medication flow rates requires nursing licensure and advanced pharmacological training.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 23</div>
+        <p>When answering a question about "Priority," the technician should remember that physiological needs come first. Which of these is the highest priority?</p>
+        <ul class="options-list">
+            <li>A. Helping a patient find their lost eyeglasses.</li>
+            <li>B. Ensuring a patient with difficulty swallowing is sitting upright during a meal.</li>
+            <li>C. Emptying a full urinary drainage bag.</li>
+            <li>D. Changing a soiled bedsheet for a patient who is sleeping.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Difficulty swallowing (dysphagia) presents an immediate risk of aspiration and airway compromise.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 24</div>
+        <p>A technician is asked to collect a mid-stream (clean-catch) urine specimen. What is the most important instruction to give the patient before collection?</p>
+        <ul class="options-list">
+            <li>A. Collect the very first part of the stream.</li>
+            <li>B. Clean the genital area, begin to urinate, stop briefly, and then collect the mid-stream urine in the cup.</li>
+            <li>C. Ensure the container is filled to the outer rim.</li>
+            <li>D. Do not use the antiseptic wipes provided.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Mid-stream collection is designed to wash away transient flora from the urethral opening, minimizing sample contamination.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 25</div>
+        <p>During post-mortem care, the nurse technician must treat the body with dignity. Which action demonstrates this principle?</p>
+        <ul class="options-list">
+            <li>A. Leaving the room with the lights turned off and the door open.</li>
+            <li>B. Cleaning the body, replacing soiled dressings, and positioning the body to look peaceful for the family.</li>
+            <li>C. Rushing through the process to leave the shift early.</li>
+            <li>D. Telling jokes while preparing the body for the morgue.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Post-mortem care is the final act of dignity and respect. Preparing the body appropriately supports the family's grieving process.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 26</div>
+        <p>To prevent shearing forces while repositioning an immobile patient in bed, the nurse technician must:</p>
+        <ul class="options-list">
+            <li>A. Slide the patient across the bottom sheet.</li>
+            <li>B. Use a draw sheet or slide sheet to lift rather than drag the patient.</li>
+            <li>C. Acknowledge and follow safe lifting guidelines by asking the patient to stand without assistance.</li>
+            <li>D. Lower the head of the bed completely before moving the patient.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Shearing and friction cause skin breakdown. Using a draw sheet protects the delicate layers of the patient's skin.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 27</div>
+        <p>When measuring an adult patient's blood pressure, the nurse technician inflates the cuff too slowly. What effect will this have on the reading?</p>
+        <ul class="options-list">
+            <li>A. It will create a falsely high reading.</li>
+            <li>B. It will result in a falsely low systolic reading.</li>
+            <li>C. It will have no effect on the measurement.</li>
+            <li>D. It will make it impossible to determine the diastolic pressure.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Inflating the cuff too slowly causes venous congestion in the arm, leading to false low systolic pressure recordings.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 28</div>
+        <p>When using an electronic pulse oximeter on a patient, the nurse technician notices the patient is wearing dark nail polish. What is the most appropriate action?</p>
+        <ul class="options-list">
+            <li>A. The technician should remove the polish before applying the probe.</li>
+            <li>B. The technician should move the sensor to an alternate site, such as the earlobe.</li>
+            <li>C. The technician should record the reading as normal.</li>
+            <li>D. The technician should hold the patient's finger still.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Dark or metallic nail polish interferes with light absorption in the pulse oximeter sensor, requiring an alternative site measurement.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 29</div>
+        <p>A patient with known suicidal ideation is on 1-to-1 observation. The nurse technician leaves the room briefly to get a cup of water. This action represents:</p>
+        <ul class="options-list">
+            <li>A. An acceptable break in observation.</li>
+            <li>B. A serious breach of protocol that endangers the patient.</li>
+            <li>C. Standard procedure for personal breaks.</li>
+            <li>D. A task that can be delegated to housekeeping.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: B</strong><br>
+            <em>Rationale:</em> Constant observation requires unbroken visual contact. Leaving the patient unattended could result in self-harm or a medical emergency.
+        </div>
+    </div>
+
+    <div class="question-block">
+        <div class="question-title">Question 30</div>
+        <p>On a multiple-choice examination, if the test-taker is unsure about the correct answer, the best strategy is to:</p>
+        <ul class="options-list">
+            <li>A. Leave the answer sheet blank.</li>
+            <li>B. Choose the longest or most detailed option.</li>
+            <li>C. Carefully read the question stem for clues, use the elimination method, and ensure that no question is left blank.</li>
+            <li>D. Change the answer to the first one selected.</li>
+        </ul>
+        <div class="answer-key">
+            <strong>Answer: C</strong><br>
+            <em>Rationale:</em> Leaving an answer blank guarantees no points. Eliminating wrong choices and making an educated guess maximizes the chances of a correct response.
+        </div>
+    </div>
+
+    <div class="footer">
+        Nurse Technician Mastery Series &copy; 2026. Designed for GitHub Pages.
+    </div>
 </div>
-
-<div class="progress-container" id="progress-container">
-    <div class="progress-bar" id="progress-bar"></div>
-</div>
-
-<div id="quiz-container"></div>
-
-<div id="results-screen">
-    <h2>Module Complete</h2>
-    <p id="candidate-name"></p>
-    <p id="score-text"></p>
-    <button class="btn-nav" onclick="location.reload()">Restart Module</button>
-</div>
-
-<script>
-    const questions = [
-        // --- Day 5: Ethical, Legal, & Communication Standards ---
-        {
-            q: "A nurse technician is at lunch in the hospital cafeteria and begins discussing a patient’s colorful behavior with a colleague. This action is a violation of:",
-            options: ["The patient’s right to a private room", "HIPAA and patient confidentiality", "The hospital’s dress code policy", "The technician’s right to free speech"],
-            correct: 1,
-            rationale: "Patient information should only be shared in a clinical setting with those who have a direct 'need to know' for providing care."
-        },
-        {
-            q: "A patient refuses to take their scheduled bath, stating they are too tired. What is the most appropriate response by the nurse technician?",
-            options: ["Force the patient to bathe anyway", "Respect the patient’s right to refuse and offer to assist later", "Tell the patient they cannot have dinner", "Call the family to scold the patient"],
-            correct: 1,
-            rationale: "Patients have the right to refuse care. The technician should document the refusal and attempt to reschedule."
-        },
-        {
-            q: "Which of the following actions by a nurse technician would be considered Invasion of Privacy?",
-            options: ["Closing the curtain before using a bedpan", "Looking through a patient’s personal purse without permission", "Knocking on the door before entering", "Covering a patient with a bath blanket"],
-            correct: 1,
-            rationale: "Patients retain rights to their personal belongings; searching them without consent or clinical necessity is a violation."
-        },
-        {
-            q: "A technician is asked by a patient's friend over the phone for an update. The technician should:",
-            options: ["Give a detailed report", "Tell the friend the patient is doing poorly", "Politely refer the caller to the nurse or the patient's spokesperson", "Hang up immediately"],
-            correct: 2,
-            rationale: "Privacy laws prevent the disclosure of medical information to unauthorized callers."
-        },
-        {
-            q: "Viewing the medical records of a patient not assigned to you just out of curiosity is:",
-            options: ["A good way to learn", "Acceptable if you are on shift", "A major HIPAA violation and terminable offense", "Only wrong if you tell someone"],
-            correct: 2,
-            rationale: "Accessing records without a professional 'need to know' is a serious breach of confidentiality."
-        },
-
-        // --- Day 6: Specialized Care (Maternity, Peds, Mental Health) ---
-        {
-            q: "A technician notices a postpartum mother’s bedsheet is soaked with bright red blood. What is the priority action?",
-            options: ["Change the sheets quickly", "Massage the abdomen vigorously", "Notify the nurse immediately", "Tell the mother this is normal"],
-            correct: 2,
-            rationale: "Heavy bleeding (postpartum hemorrhage) is a medical emergency that requires immediate assessment by the licensed nurse."
-        },
-        {
-            q: "When weighing a newborn infant, which safety measure is most important?",
-            options: ["Leave the infant on the scale to document", "Keep one hand hovering just above the infant at all times", "Weigh the infant with heavy clothes on", "Place the scale on the floor"],
-            correct: 1,
-            rationale: "Infants can move unexpectedly; 'hovering' ensures safety without affecting the weight measurement."
-        },
-        {
-            q: "A 4-year-old child is crying for their parents. Which action is most helpful?",
-            options: ["Tell the child big kids don't cry", "Offer a favorite toy or distraction", "Lock the door", "Ignore the crying"],
-            correct: 1,
-            rationale: "Distraction and play are age-appropriate therapeutic interventions for pediatric distress."
-        },
-        {
-            q: "A mental health patient begins to pace rapidly and speak loudly. The technician should:",
-            options: ["Ignore the behavior", "Alert the nurse and provide space for the patient", "Challenge the patient's statements", "Tell the patient to sit down immediately"],
-            correct: 1,
-            rationale: "Pacing and loud speech are signs of escalating agitation; ensuring safety and notifying the nurse is the priority."
-        },
-        {
-            q: "In the nursery, a technician notices an infant has a bluish tint around the mouth (circumoral cyanosis). The technician should:",
-            options: ["Check the infant's diaper", "Provide a warm blanket", "Report it to the nurse immediately", "Wait 10 minutes to see if it improves"],
-            correct: 2,
-            rationale: "Cyanosis indicates poor oxygenation and is a critical finding in a newborn."
-        },
-
-        // --- Day 7: Comprehensive Review & Priority ---
-        {
-            q: "A patient with a cast complains of an itch, but another patient’s pulse has increased from 72 to 110. Who should be reported FIRST?",
-            options: ["The patient with the itch", "The patient with the increased pulse", "A patient who refused breakfast", "A patient who wants water"],
-            correct: 1,
-            rationale: "Tachycardia (pulse over 100) is a physiological change that takes precedence over comfort or routine requests."
-        },
-        {
-            q: "Which task is OUTSIDE the scope of practice for a nurse technician?",
-            options: ["Taking a rectal temperature", "Applying a simple non-sterile dressing", "Adjusting the flow rate of an IV pump", "Assisting with a walker"],
-            correct: 2,
-            rationale: "Managing IV medication pumps requires a license and is outside the technical scope of practice."
-        },
-        {
-            q: "When collecting a mid-stream urine specimen, the technician should instruct the patient to:",
-            options: ["Collect the very first part of the stream", "Clean the area, start to void, then collect the middle portion", "Fill the cup to the brim", "Not use any cleaning wipes"],
-            correct: 1,
-            rationale: "Mid-stream collection reduces contamination from skin bacteria."
-        },
-        {
-            q: "A patient with suicidal ideation is placed on 1-to-1 observation. The technician should:",
-            options: ["Check on them every 15 minutes", "Keep the door closed", "Maintain constant 'eyes-on' contact at all times", "Stay in the hallway"],
-            correct: 2,
-            rationale: "1-to-1 observation requires continuous, direct visual monitoring to ensure the patient's safety."
-        },
-        {
-            q: "Post-mortem care (care after death) should be performed:",
-            options: ["Only by the doctor", "With respect and dignity, following hospital policy", "Immediately after the family leaves without cleaning the body", "Only if the patient's family pays"],
-            correct: 1,
-            rationale: "Post-mortem care is a vital nursing task that demonstrates respect for the deceased and the family."
-        }
-    ];
-
-    let currentIdx = 0;
-    let score = 0;
-
-    function startExam() {
-        const name = document.getElementById('user-name').value;
-        if (!name) return alert("Please enter your name.");
-        document.getElementById('welcome-screen').style.display = 'none';
-        document.getElementById('progress-container').style.display = 'block';
-        initQuiz();
-    }
-
-    function initQuiz() {
-        const container = document.getElementById('quiz-container');
-        questions.forEach((q, i) => {
-            const div = document.createElement('div');
-            div.className = 'question-card' + (i === 0 ? ' active' : '');
-            div.id = `card-${i}`;
-            div.innerHTML = `
-                <h3>Question ${i + 101}</h3>
-                <p>${q.q}</p>
-                ${q.options.map((opt, oi) => `<div class="option" onclick="handleSelect(${i}, ${oi}, this)">${opt}</div>`).join('')}
-                <div class="rationale" id="rat-${i}"><strong>Rationale:</strong> ${q.rationale}</div>
-                <button class="btn-nav" id="next-${i}" style="display:none" onclick="goNext()">Next Question</button>
-            `;
-            container.appendChild(div);
-        });
-    }
-
-    function handleSelect(qi, oi, el) {
-        const card = document.getElementById(`card-${qi}`);
-        if (card.dataset.answered) return;
-        card.dataset.answered = "true";
-
-        if (oi === questions[qi].correct) {
-            el.classList.add('selected-correct');
-            score++;
-        } else {
-            el.classList.add('selected-incorrect');
-            card.querySelectorAll('.option')[questions[qi].correct].classList.add('selected-correct');
-        }
-
-        document.getElementById(`rat-${qi}`).style.display = 'block';
-        document.getElementById(`next-${qi}`).style.display = 'inline-block';
-    }
-
-    function goNext() {
-        document.getElementById(`card-${currentIdx}`).classList.remove('active');
-        currentIdx++;
-        updateProgress();
-        if (currentIdx < questions.length) {
-            document.getElementById(`card-${currentIdx}`).classList.add('active');
-        } else {
-            showResults();
-        }
-    }
-
-    function updateProgress() {
-        document.getElementById('progress-bar').style.width = (currentIdx / questions.length * 100) + '%';
-    }
-
-    function showResults() {
-        document.getElementById('progress-container').style.display = 'none';
-        const res = document.getElementById('results-screen');
-        res.style.display = 'block';
-        document.getElementById('candidate-name').innerText = `Results for ${document.getElementById('user-name').value}`;
-        document.getElementById('score-text').innerText = `Final Score: ${score} / ${questions.length}`;
-    }
-</script>
 
 </body>
 </html>
